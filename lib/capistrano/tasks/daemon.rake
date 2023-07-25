@@ -1,7 +1,7 @@
 git_plugin = self
 
 namespace :puma do
-  desc 'Start puma 111'
+  desc 'Start puma 222'
   task :start do
     on roles(fetch(:puma_role)) do |role|
       git_plugin.puma_switch_user(role) do
@@ -10,7 +10,7 @@ namespace :puma do
         else
           within current_path do
             with rack_env: fetch(:puma_env) do
-              execute :pumad, "-C #{fetch(:puma_conf)} --daemon"
+              execute :puma, "-C #{fetch(:puma_conf)} --daemon"
             end
           end
         end

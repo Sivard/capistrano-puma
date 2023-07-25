@@ -5,5 +5,5 @@ GitHubChangelogGenerator::RakeTask.new :changelog do |config|
   config.user = 'seuros'
   config.project = 'capistrano-puma'
   config.issues = false
-  config.future_release = '5.2.1'
+  config.future_release = '5.2.2'
 end
